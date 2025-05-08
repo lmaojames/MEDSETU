@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDSETU - Choose Your Profile</title>
+    <style>
+        @font-face {
+            font-family: 'Artifakt Element';
+            src: url('ArtifaktElement-Regular.woff2') format('woff2'),
+                 url('ArtifaktElement-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Artifakt Element', sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 14px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+        .nav-links a, .login {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+        .login {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 0 10%;
+            text-align: center;
+        }
+        .title {
+            font-size: 30px; /* Decreased MEDSETU font size */
+        }
+        .profile-title {
+            font-size: 50px; /* Increased Choose Your Profile font size */
+        }
+        .button-container {
+            display: flex;
+            gap: 40px; /* Increased gap between buttons */
+            margin-top: 80px; /* Increased space between title and buttons */
+        }
+        .button-container button {
+            font-size: 24px; /* Increased button font size */
+            padding: 20px 40px; /* Increased button padding */
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        .image-container {
+            width: 100%;
+            height: auto;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .trust-bar {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./health-monitoring.html">Health Monitoring</a>
+            <a href="./upload-documents.html">Upload Documents</a>
+            <a href="./access-documents.html">Access Documents</a>
+            <a href="./about.html">About</a>
+            <a href="./help.html">Help</a>
+            <a href="./faqs.html">FAQs</a>
+            <a href="./review.html">Review</a>
+        </div>
+        <div class="login" onclick="location.href='./login.html'">Login</div>
+    </div>
+    
+    <div class="container">
+        <div class="title">MEDSETU</div>
+        <div class="profile-title">Choose Your Profile</div>
+        <div class="button-container">
+            <button onclick="location.href='./credentials-login-patient.html'">Patient</button>
+            <button onclick="location.href='./credentials-login-doctor.html'">Doctor</button>
+        </div>
+        <div class="image-container">
+            <img src="https://picsum.photos/1500/500" width="100%" height="auto"/>
+        </div>
+    </div>
+</body>
+</html>

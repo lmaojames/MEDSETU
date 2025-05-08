@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDSETU - Doctor Interface</title>
+    <style>
+        @font-face {
+            font-family: 'Artifakt Element';
+            src: url('ArtifaktElement-Regular.woff2') format('woff2'),
+                 url('ArtifaktElement-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Artifakt Element', sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 14px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+        .medsetu {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 0 10%;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            gap: 40px; /* Gap between boxes */
+            margin-top: 40px; /* Space between title and boxes */
+        }
+        .button-container .box {
+            width: 300px; /* Made the boxes bigger */
+            height: 300px; /* Made the boxes bigger */
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White font */
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px; /* Added padding */
+        }
+        .button-container .box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Ensure the image covers the box */
+            margin-bottom: 10px;
+        }
+        .button-container .box span {
+            font-size: 16px; /* Smaller font size for the text */
+            margin-top: auto; /* Push the text to the bottom */
+        }
+        .image-container {
+            width: 100%;
+            height: auto;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-top: 60px; /* Increased distance from the boxes */
+        }
+        .trust-bar {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./health-monitoring.html">Health Monitoring</a>
+            <a href="./upload-documents.html">Upload Documents</a>
+            <a href="./access-documents.html">Access Documents</a>
+            <a href="./about.html">About</a>
+            <a href="./help.html">Help</a>
+            <a href="./faqs.html">FAQs</a>
+            <a href="./review.html">Review</a>
+        </div>
+        <div class="medsetu">MEDSETU</div>
+    </div>
+    
+    <div class="container">
+        <div class="button-container">
+            <div class="box" onclick="location.href='./access-documents.html'">
+                <img src="https://picsum.photos/1500/500" alt="Access Documents">
+                <span>Access Documents</span>
+            </div>
+            <div class="box" onclick="location.href='./health-monitoring.html'">
+                <img src="https://picsum.photos/1500/500" alt="Access Live Health Monitoring">
+                <span>Access Live Health Monitoring</span>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://picsum.photos/1500/500" width="100%" height="auto"/>
+        </div>
+    </div>
+</body>
+</html>

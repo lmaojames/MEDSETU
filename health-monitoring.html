@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDSETU - Health Monitoring</title>
+    <style>
+        @font-face {
+            font-family: 'Artifakt Element';
+            src: url('ArtifaktElement-Regular.woff2') format('woff2'),
+                 url('ArtifaktElement-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Artifakt Element', sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 14px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+        .nav-links a, .login {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+        .login {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+            height: 80vh;
+            padding: 0 10%;
+        }
+        .title {
+            font-size: 40px;
+        }
+        .subtitle {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #555;
+        }
+        .subtitle .login {
+            font-size: 18px;
+            font-weight: normal;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .image-container {
+            width: 300px;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .trust-bar {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="./cindex.html">Home</a>
+            <a href="./health-monitoring.html">Health Monitoring</a>
+            <a href="./upload-documents.html">Upload Documents</a>
+            <a href="./access-documents.html">Access Documents</a>
+            <a href="./about.html">About</a>
+            <a href="./help.html">Help</a>
+            <a href="./faqs.html">FAQs</a>
+            <a href="./review.html">Review</a>
+        </div>
+        <div class="login" onclick="location.href='./login.html'">Login</div>
+    </div>
+    
+    <div class="container">
+        <div>
+            <div class="title">MEDSETU</div>
+            <div class="title">Health Monitoring</div>
+            <div class="subtitle">Real-time health monitoring made seamless—track, analyze, and access your ECG data anytime, anywhere with MEDSETU. To access, <span class="login" onclick="location.href='./login.html'">login</span>.</div>
+            <div class="trust-bar">Trusted by 10,000+ Customers</div>
+        </div>
+        <div class="image-container">
+            <img src="https://picsum.photos/1500/500" width="300" height="500"/>
+        </div>
+    </div>
+</body>
+</html>
+```` 

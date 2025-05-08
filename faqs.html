@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDSETU - FAQ</title>
+    <style>
+        @font-face {
+            font-family: 'Artifakt Element';
+            src: url('ArtifaktElement-Regular.woff2') format('woff2'),
+                 url('ArtifaktElement-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Artifakt Element', sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 14px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+        .medsetu {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 0 10%;
+            text-align: center;
+        }
+        .search-bar-container {
+            margin-top: 40px; /* Space between title and search bar */
+            width: 100%;
+            max-width: 600px;
+        }
+        .search-bar-container input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .faq-section {
+            margin-top: 60px; /* Increased distance from the search bar */
+            text-align: left;
+            width: 100%;
+            max-width: 800px;
+        }
+        .faq-item {
+            background-color: #007BFF;
+            color: white;
+            border: 1px solid #007BFF;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .faq-item:hover {
+            background-color: #0056b3;
+        }
+        .faq-item h3 {
+            margin-top: 0;
+        }
+        .image-container {
+            width: 100%;
+            height: auto;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-top: 60px; /* Increased distance from the FAQ items */
+        }
+        .trust-bar {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+    <script>
+        function filterFAQs() {
+            const searchInput = document.getElementById('faq-search').value.toLowerCase();
+            const faqItems = document.getElementsByClassName('faq-item');
+            for (let i = 0; i < faqItems.length; i++) {
+                const question = faqItems[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                const answer = faqItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+                if (question.includes(searchInput) || answer.includes(searchInput)) {
+                    faqItems[i].style.display = '';
+                } else {
+                    faqItems[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./health-monitoring.html">Health Monitoring</a>
+            <a href="./upload-documents.html">Upload Documents</a>
+            <a href="./access-documents.html">Access Documents</a>
+            <a href="./about.html">About</a>
+            <a href="./help.html">Help</a>
+            <a href="./faqs.html">FAQs</a>
+            <a href="./review.html">Review</a>
+        </div>
+        <div class="medsetu">MEDSETU</div>
+    </div>
+    
+    <div class="container">
+        <div class="search-bar-container">
+            <input type="text" id="faq-search" onkeyup="filterFAQs()" placeholder="What are you looking for?">
+        </div>
+        <div class="faq-section">
+            <div class="faq-item">
+                <h3>1. What is MEDSETU?</h3>
+                <p>MEDSETU is a platform designed to help users manage their health records and access medical documents conveniently in one place.</p>
+            </div>
+            <div class="faq-item">
+                <h3>2. Who can use MEDSETU?</h3>
+                <p>Anyone who needs a digital solution for health monitoring and document access, including patients, doctors, and healthcare professionals.</p>
+            </div>
+            <div class="faq-item">
+                <h3>3. Is MEDSETU free to use?</h3>
+                <p>Yes, MEDSETU offers free basic services. Additional features may require a subscription or one-time payment.</p>
+            </div>
+            <div class="faq-item">
+                <h3>4. How do I create an account on MEDSETU?</h3>
+                <p>Click on the "Login" button on the homepage and follow the sign-up instructions to create an account.</p>
+            </div>
+            <div class="faq-item">
+                <h3>5. What health metrics can I track on MEDSETU?</h3>
+                <p>MEDSETU allows you to monitor vital health parameters like blood pressure, sugar levels, heart rate, and more.</p>
+            </div>
+            <div class="faq-item">
+                <h3>6. Can I sync data from wearable devices?</h3>
+                <p>Currently, MEDSETU supports manual data entry. Future updates may include integration with wearable health devices.</p>
+            </div>
+            <div class="faq-item">
+                <h3>7. What types of documents can I upload?</h3>
+                <p>You can upload medical reports, prescriptions, lab test results, and other health-related documents in PDF, JPEG, and PNG formats.</p>
+            </div>
+            <div class="faq-item">
+                <h3>8. How secure are my documents on MEDSETU?</h3>
+                <p>Your documents are securely stored using encryption protocols to ensure maximum privacy and security.</p>
+            </div>
+            <div class="faq-item">
+                <h3>9. Can I share my documents with doctors?</h3>
+                <p>Yes, MEDSETU allows you to securely share your health records with doctors via a link or direct access.</p>
+            </div>
+            <div class="faq-item">
+                <h3>10. I forgot my password. How do I reset it?</h3>
+                <p>Click on the "Forgot Password?" link on the login page and follow the instructions to reset your password.</p>
+            </div>
+            <div class="faq-item">
+                <h3>11. I uploaded the wrong document. How can I delete it?</h3>
+                <p>Go to the "Upload Documents" section, find the document, and use the delete option to remove it.</p>
+            </div>
+            <div class="faq-item">
+                <h3>11. Why am I unable to upload my documents?
+                    </h3>
+                <p>Ensure your file format is supported (PDF, JPEG, PNG) and that it does not exceed the maximum file size limit.
+                    Privacy & Security</p>
+            </div>
+            <div class="faq-item">
